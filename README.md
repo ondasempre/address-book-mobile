@@ -1,4 +1,4 @@
-# address-book-mobile
+# Address-Book-Mobile
 A mobile application that provides a telephone directory
 
 ## What can the application do?
