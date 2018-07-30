@@ -1,5 +1,16 @@
-# Address-Book-Mobile
+# address-book-mobile
 A mobile application that provides a telephone directory
+
+
+## General structure
+
+* **Home Page**
+
+* **Add Page**
+
+* **Edit Page**
+
+
 
 ## What can the application do?
 
