@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--
+    @author F.M
+    @version 1.0
+    @date 28/07/2018
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+        <title>Telephone directory Mobile Edition</title>
+        <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
+
+        <script type="text/javascript" src="store.js"></script>
+        <script type="text/javascript" src="contacts.js"></script>
+        <script type="text/javascript" src="add.js"></script>
+        <script type="text/javascript" src="edit.js"></script>
+        <script type="text/javascript" src="validate.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+
+    </head>
+
+    <body>
+        <div data-role="page" id="page-main">
+            <div data-role="header">
+                <h1>Telephone directory Mobile Edition</h1>
+                <a href="#page-add" id="add" data-icon="plus" class="ui-btn-right">Add</a>
+            </div>
+
+            <div data-role="content">
+                <ul data-role="listview" id="all-contacts" data-filter="true" data-input="#filterBasic-input">
+                </ul>
+            </div>
+        </div>
+        
+        <div data-role="page" id="page-add">
+            <div data-role="header">
+                <h1>Add Contact</h1>
+            </div>
+
+            <div data-role="content">
+                <div data-role="fieldcontain">
+                    <label for="name">Contact Name</label>
+                    <input type="text" name="name" id="fld-name" value="" placeholder="Mario"/>
+                </div>
+
+                <div data-role="fieldcontain">
+                    <label for="lname">Contact Last Name</label>
+                    <input type="text" name="lname" id="fld-lname" value="" placeholder="Rossi"/>
+                </div>
+
+                <div data-role="fieldcontain">
+                    <label for="number">Phone Number</label>
+                    <input type="tel" name="phone" class="phone" id="fld-phone" value="" placeholder="+39 00 1234567" pattern="^[+][0-9][0-9]\s\d{2}\s\d{4}" required/>
+                </div>
+
+                <div data-role="fieldcontain">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="fld-email" placeholder="mario@rossi.com"/>
+                </div>
+
+                <a href="#page-main" id="btn-save-contact" data-inline="true" data-role="button" data-theme="b" data-direction="reverse">Save</a>
+                <a href="#page-main" data-inline="true" data-role="button" data-direction="reverse">Cancel</a>
+            </div>
+
+        </div>
+
+        <div data-role="page" id="page-edit">
+                <div data-role="header">
+                    <h1>Edit Contact</h1>
+                </div>
+    
+                <div data-role="content">
+                    <div data-role="fieldcontain">
+                        <label for="name">Contact Name</label>
+                        <input type="text" name="name" id="fld-name-edit" value="" />
+                    </div>
+    
+                    <div data-role="fieldcontain">
+                        <label for="lname">Contact Last Name</label>
+                        <input type="text" name="lname" id="fld-lname-edit" value="" />
+                    </div>
+    
+                    <div data-role="fieldcontain">
+                        <label for="number">Phone Number</label>
+                        <input type="tel" name="phone" id="fld-phone-edit phone" value="" />
+                    </div>
+    
+                    <div data-role="fieldcontain">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="fld-email-edit" />
+                    </div>
+    
+                    <a href="#page-main" id="btn-save-contact-edit" data-inline="true" data-role="button" data-theme="b" data-direction="reverse">Save</a>
+                    <a href="#page-main" data-inline="true" data-role="button" data-direction="reverse">Cancel</a>
+                </div>
+    
+        </div>
+
+        <div data-role="page" id="page-view">
+            <div data-role="header">
+                <h1>Contact Info</h1>
+                <a href="#page-main" data-direction="reverse">Back</a>
+                <a href="#page-edit" id="edit" data-icon="plus" class="ui-btn-right">Edit</a>
+            </div>
+
+            <div data-role="content">
+                <div><b>First Name: </b><span id="view-name"></span></div>
+                <div><b>Last Name: </b><span id="view-lname"></span></div>
+                <div><b>Phone: </b><span id="view-phone"></span></div>
+                <div><b>Email: </b><span id="view-email"></span></div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+
